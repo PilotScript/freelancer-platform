@@ -13,7 +13,7 @@ const messageRoutes = require('./routes/messages');
 const paymentRoutes = require('./routes/payments');
 
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // Initialize express app
 const app = express();
@@ -51,6 +51,8 @@ app.use((err, req, res, next) => {
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
+
+console.log('Attempting to connect to MongoDB with URI:', process.env.MONGO_URI ? 'URI Found' : 'URI NOT FOUND!');
 
 mongoose
   .connect(process.env.MONGO_URI || 'mongodb://localhost:27017/freelancer-platform', {

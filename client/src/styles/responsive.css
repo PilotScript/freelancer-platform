@@ -1,0 +1,143 @@
+/* Global responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  /* Adjust font sizes for medium screens */
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  /* Adjust layout for tablets */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Adjust font sizes for small screens */
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Adjust spacing for small screens */
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Adjust layout for mobile */
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust font sizes for extra small screens */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Adjust spacing for extra small screens */
+  .section {
+    padding: 2rem 0;
+  }
+  
+  /* Stack elements on mobile */
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  /* Adjust buttons for mobile */
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Hide elements on mobile */
+@media (max-width: 576px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+/* Hide elements on tablet */
+@media (max-width: 768px) and (min-width: 577px) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
+
+/* Show elements only on mobile */
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Responsive form elements */
+@media (max-width: 576px) {
+  input, select, textarea {
+    width: 100%;
+  }
+}
